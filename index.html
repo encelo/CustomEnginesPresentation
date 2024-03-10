@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>nCine: a world with custom in-house engines is possible</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: middle, center
+
+# nCine: a world with custom in-house engines **is** possible
+Angelo "_Encelo_" Theodorou
+
+!["nCine banner"](img/ncine/banner.png)
+
+---
+
+# The author 👴
+
+- Born in 1983, grown up with C= Amigas for ten years (1991- 2001)
+  - Fell in love with Amiga games and its demoscene
+- An everyday desktop *nix user for almost 25 years
+  - Using Arch Linux daily since 2005
+- Interested in low-level coding and computer graphics
+- Engine and graphics programmer for mobile and console games
+  - Natural Motion's Echo engine (Clumsy Ninja, Dawn of Titans)
+  - EA Frostbite (FIFA 18-20, Battlefield V, Battlefront II, Anthem)
+  - Bethesda's Creation Engine 2 (Starfield)
+- Developing the nCine since June 2011
+
+---
+
+## What is a custom in-house engine? 🤔
+
+- Custom: developed alongside a game to serve its needs
+- In-house: tech and game teams work under the same roof
+
+--
+
+
+- With lots of **exceptions**:
+  - Can be reused for multiple games (RAGE)
+  - Can be licensed to other studios (id Tech)
+  - Can be developed by a specific division within a company (Frostbite)
+
+--
+
+
+- The **opposite** of this is a generic software technology
+  - Can be used to develop different types of games
+  - Distributed or sold by a specialized (sometimes non-game) company
+  - Think of Unreal, Unity, CryEngine, Godot, GameMaker, …
+
+--
+
+
+- Custom engines are especially employed in AAA games
+  - But there are some notable indie exceptions 💪
+
+---
+
+## Can't you just use Unity/Unreal like everyone else?
+### Yes, but also no. 😏
+
+---
+
+## Can't you just use Unity/Unreal like everyone else? #0
+
+![:scale 720px](img/Unity_pricing.png)
+
+Well, we all know how well it went... 😅
+
+---
+
+## Can't you just use Unity/Unreal like everyone else? #1
+
+Articles on this theme:
+- [On the Perceived Inevitability of Unreal](https://alextardif.com/Unreal.html) by _Alex Tardif_
+- [Ships, Icebergs, Game Engines](https://www.rfleury.com/p/ships-icebergs-game-engines) by _Ryan Fleury_
+- [A case for building your own tech | Opinion](https://www.gamesindustry.biz/a-case-for-building-your-own-tech-opinion) by _Dan Baker_
+- [Handmade Network](https://handmade.network/)
+
+
+List of game engines and frameworks:
+- [Custom Game Engines: A Small Study](https://gist.github.com/raysan5/909dc6cf33ed40223eb0dfe625c0de74) by _raysan5_
+- [Indie Bookmarks: some indie games and their technology](https://docs.google.com/spreadsheets/d/1z1RV6w4HjPODFcao34h72Vw-9KxtQ9rv0ZM7folTUMU/edit#gid=0) by _Encelo_
+
+---
+
+## Can't you just use Unity/Unreal like everyone else? #2
+
+The author is a Lead Graphics Programmer at ZeniMax Online Studios.
+- In-house engine development has declined over the last decade
+- The pool of game engine and graphics talent is shrinking
+- Independent game middlewares are dead (bought by Unity/Epic)
+- The framework and tooling infrastructure is too much work
+
+(From "_On the Perceived Inevitability of Unreal_" by Alex Tardif)
+
+---
+
+## Can't you just use Unity/Unreal like everyone else? #3
+
+Written just after _The Machinery_ was obliterated from the face of the Earth.
+- When you give up ownership, you give up your rights
+- You lose your agency over time, money, professional development
+- Something that is more abstract exposes fewer capabilities
+  - Not everything you could do in your own engine is possible in a pre-built game engine
+- The "_don't reinvent the wheel_" mantra diminishes ownership and scoffs at self-reliance
+
+(From "_Ships, Icebergs, Game Engines_" by Ryan Fleury)
+
+---
+
+## Can't you just use Unity/Unreal like everyone else? #4
+
+Written by Oxide Games' co-founder and CTO.
+- Innovation and unique gameplay: build a game that breaks the mold
+- Attract top devs who want to leave a mark, solve novel problems, work on cutting-edge technology
+- Custom tech can be initially expensive, but the investments can yield long-term savings
+- It seems Unity and Unreal won't stay inexpensive and perpetual
+- A custom engine usually compiles faster and runs faster in debug
+- Some games have technological requirements that off-the-shelf engines cannot satisfy
+- Even off-the-shelf solutions need a technical investment for customization
+
+(From "_A case for building your own tech | Opinion_" by Dan Baker)
+
+---
+
+## Can't you just use Unity/Unreal like everyone else? #5
+
+- Computers are amazing
+- So why is software so terrible?
+  - Slow to load, thirsty on batteries, crashes all the time
+- We made it terrible
+  - We ignored the hardware, we glued together libraries so we didn't have to learn, we built layers on top of layers until no one knew how anything worked
+  - We're building Rube Goldberg machines, and users are paying the cost.
+- But there is another way
+  - We can build software that works with the computer, not against it. All you need is an open mind and a sense of curiosity.
+
+(From the _Handmade Network Manifesto_)
+
+![:scale 240px](img/RubeGoldberg.png)
+
+---
+
+# They didn't use Unity/Unreal
+## Some examples from the indie ecosystem
+
+---
+
+# They didn't use Unity/Unreal #1
+
+**Spelunky Classic**, 21/12/2008 (GameMaker)
+
+![:scale 720px](img/games/Spelunky.jpg)
+
+**Spelunky HD** and **Spelunky 2** use a custom engine
+
+---
+
+# They didn't use Unity/Unreal #2
+
+**Legend of Grimrock**, 11/04/2012, by _Almost Human Games_ (Custom)
+
+![:scale 720px](img/games/Legend_of_Grimrock.jpg)
+
+**Legend of Grimrock 2** also made with the same custom engine
+
+---
+
+# They didn't use Unity/Unreal #3
+
+**Little Inferno**, 19/11/2012, by _Tomorrow Corporation_ (Custom)
+
+![:scale 720px](img/games/Little_Inferno.jpg)
+
+**World of Goo**, **Human Resource Machine**, and **7 Billion Humans** are all based on a custom engine too
+
+---
+
+# They didn't use Unity/Unreal #4
+
+**Guacamelee!**, 09/04/2013, by _DrinkBox Studios_ (Custom)
+
+![:scale 720px](img/games/Guacamelee.jpg)
+
+**Guacamelee! 2** also on a custom engine
+
+---
+
+# They didn't use Unity/Unreal #5
+
+**Don't Starve**, 23/04/2013, by _Klei Entertainment_ (Custom)
+
+![:scale 720px](img/games/Dont_Starve.jpg)
+
+All their games are made with custom technology (**Mark of the Ninja**, **Invisible, Inc.**, **Oxygen Not Included**, **Griftlands**)
+
+---
+
+# They didn't use Unity/Unreal #6
+
+**Hammerwatch**, 12/08/2013, by _Crackshell_ (Custom)
+
+![:scale 720px](img/games/Hammerwatch.jpg)
+
+**Heroes of Hammerwatch** and **Hammerwatch 2** use a custom engine too
+
+---
+
+# They didn't use Unity/Unreal #7
+
+**Banished**, 18/02/2014, by _Shining Rock Software_ (Custom)
+
+![:scale 720px](img/games/Banished.jpg)
+
+His next solo game also runs on custom technology
+
+---
+
+# They didn't use Unity/Unreal #8
+
+**Shovel Knight**, 26/06/2014, by _Yacht Club Games_ (Custom)
+
+![:scale 720px](img/games/Shovel_Knight.jpg)
+
+**Pocket Dungeon** made with GameMaker Studio, **Mina the Hollower** with a custom engine
+
+---
+
+# They didn't use Unity/Unreal #9
+
+**Crypt of the Necrodancer**, 23/04/2015, by _Brace Yourself Games_ (Custom)
+
+![:scale 720px](img/games/Crypt_of_the_Necrodancer.jpg)
+
+**Industries of Titan** made with UE4 🤷
+
+---
+
+# They didn't use Unity/Unreal #10
+
+**Victor Vran ARPG**, 24/07/2015, by _Haemimont Games_ (HaemimontSol)
+
+![:scale 720px](img/games/Victor_Vran.jpg)
+
+All their games are made with their custom engine, including **Surviving Mars**, **Tropico 3-4-5**, **Jagged Alliance 3**
+
+---
+
+# They didn't use Unity/Unreal #11
+
+**Prison Architect**, 06/10/2015, by _Introversion Software_ (Custom)
+
+![:scale 720px](img/games/Prison_Architect.jpg)
+
+---
+
+# They didn't use Unity/Unreal #12
+
+**Darkest Dungeon**, 19/01/2016, by _Red Hook Studios_ (Custom)
+
+![:scale 720px](img/games/Darkest_Dungeon.jpg)
+
+**Darkest Dungeon 2** runs on Unity 😢
+
+---
+
+# They didn't use Unity/Unreal #13
+
+**Stardew Valley**, 26/02/2016, by _ConcernedApe_ (XNA, then MonoGame)
+
+![:scale 720px](img/games/Stardew_Valley.webp)
+
+**Haunted Chocolatier** is in development using MonoGame
+
+---
+
+# They didn't use Unity/Unreal #14
+
+**Celeste**, 25/01/2018, by _Matt Makes Games_ (FNA and MonoGame)
+
+![:scale 720px](img/games/Celeste.jpg)
+
+---
+
+# They didn't use Unity/Unreal #15
+
+**Into the Breach**, 27/02/2018, by _Subset Games_ (Custom)
+
+![:scale 720px](img/games/Into_The_Breach.jpg)
+
+**Faster Than Light** also made with a custom engine
+
+---
+
+# They didn't use Unity/Unreal #16
+
+**Yoku's Island Express**, 29/05/2018, by _Villa Gorilla_ (Custom)
+
+![:scale 720px](img/games/Yokus_Island_Express.jpg)
+
+---
+
+# They didn't use Unity/Unreal #17
+
+**Dead Cells**, 06/08/2018, by _Motion Twin_ ([Heaps](https://heaps.io/))
+
+![:scale 720px](img/games/Dead_Cells.png)
+
+All _Shiro Games_ titles are made with Heaps too (**Evoland**, **Evoland 2**, **Northgard**, **Darksburg**, **Dune: Spice Wars**)
+
+---
+
+# They didn't use Unity/Unreal #18
+
+**Wargroove**, 01/02/2019, by _Chucklefish Games_ ([Halley](https://github.com/amzeratul/halley))
+
+![:scale 720px](img/games/Wargroove.jpg)
+
+**Wargroove2** and **Witchbrook** also on the same engine
+
+---
+
+# They didn't use Unity/Unreal #19
+
+**Pathway**, 11/04/2019, by _Robotality_ (Custom)
+
+![:scale 720px](img/games/Pathway.jpg)
+
+[Devlog #18: The Art and Tech behind Pathway](https://steamcommunity.com/games/546430/announcements/detail/1700601856676355706)
+
+---
+
+# They didn't use Unity/Unreal #20
+
+**Factorio**, 14/08/2020, by _Wube Software_ (Custom)
+
+![:scale 720px](img/games/Factorio.jpg)
+
+---
+
+# They didn't use Unity/Unreal #21
+
+**Hades**, 17/09/2020, by _Supergiant Games_ ([The Forge](https://theforge.dev/))
+
+![:scale 720px](img/games/Hades.jpg)
+
+Previous games are all made with XNA or MonoGame (**Bastion**, **Transistor**, **Pyre**)
+
+---
+
+# They didn't use Unity/Unreal #22
+
+**Eastward**, 16/09/2021, by _Pixpil_ (MOAI)
+
+![:scale 720px](img/games/Eastward.jpg)
+
+"Behind the garage scene. Showing deferred buffers." from [Twitter](https://twitter.com/pixpilgames/status/661845634845020161)
+
+---
+
+# They didn't use Unity/Unreal #23
+
+**The Riftbraker**, 14/10/2021, by _EXOR Studios_ (Custom)
+
+![:scale 720px](img/games/The_Riftbraker.jpg)
+
+---
+
+# They didn't use Unity/Unreal #24
+
+**Teardown**, 21/04/2022, by _Tuxedo Labs_ (Custom)
+
+![:scale 720px](img/games/Teardown.jpg)
+
+---
+
+# They didn't use Unity/Unreal #25
+
+**Return To Monkey Island**, 19/09/2022, by _Terrible Toybox_ (Custom)
+
+![:scale 720px](img/games/RTMI.jpg)
+
+**Thimbleweed Park** also made with the same custom engine
+
+---
+
+# The nCine ⚙️
+
+---
+
+# What is nCine?
+
+- Encelo + engine = nCine 😏
+- Cross-platform 2D game framework
+  - Linux, Windows, macOS, Android, Emscripten, MinGW-w64
+  - Tested on: Nvidia Shield, Asus ZenWatch 1, Raspberry Pi, Steam Deck
+  - Supports multiple compilers: GCC, Clang, MSVC, AppleClang
+- Suitable for games, prototypes, tools, demos
+- [Open source](https://github.com/nCine) with a MIT license
+- Small enough to be fully understood by one person
+
+---
+
+# Main Features #1
+
+- Written in C++11 but can be scripted with Lua
+- Uses OpenGL 3.3 and ES 3.0 for graphics, OpenAL for the audio
+- Can load and save PNG and WebP images (via libpng and libwebp)
+  - Can also load GPU-compressed formats like ASTC, ETC2, PVR, DXT, etc.
+- Can load WAVE sounds or stream Vorbis music (via libogg and libvorbis)
+- Automatic culling and batching of sprites
+  - Sprites can be rectangles or 2D meshes, with spritesheet animations
+- Custom user shaders without sacrificing automatic batching
+- Multiple viewports (for split-screen or post-processing)
+- Bitmap font rendering with kerning pairs and Unicode characters
+- Logging system with multiple levels, and console or file output
+
+---
+
+# Main Features #2
+
+- nCTL custom template library used in place of STL
+  - Containers (arrays, lists, hashmaps, sparse sets), iterators, algorithms
+  - Unique and shared smart pointers
+- Basic math library for vectors, 4x4 matrices and quaternions
+- Custom code for strings, atomic operations, monotonic clocks
+- Custom memory allocators (linear, stack, pool, free-list)
+- Filesystem functions for queries and operations on files and directories
+- Thread pool creation, synchronization, and affinity assignment
+- Can use GLFW, SDL2, or Qt5 as desktop backends
+- Gamepad support with SDL2 gamepad mapping strings on all backends
+- Integration with [Dear ImGui](https://github.com/ocornut/imgui) and [Nuklear](https://github.com/Immediate-Mode-UI/Nuklear) for user interfaces
+- Integration with [RenderDoc](https://renderdoc.org/) (gfx debugger) and [Tracy](https://bitbucket.org/wolfpld/tracy) (frame profiler)
+
+---
+
+# Main Features (screenshots #1)
+
+![:scale 360px](img/ncine/RenderDoc_capture.png)
+![:scale 360px](img/ncine/tracy.png)
+![:scale 360px](img/ncine/apptest_camera_debug.png)
+![:scale 360px](img/ncine/lua_scripting.png)
+
+Sprite batching, Tracy integration, ImGui debug overlay, Lua scripting
+
+---
+
+# Main Features (screenshots #2)
+
+![:scale 360px](img/ncine/apptest_viewports.png)
+[![:scale 360px](img/ncine/apptest_shaders.png)](https://www.youtube.com/watch?v=T1XRrK77u6M)
+[![:scale 360px](img/ncine/apptest_allocators.png)](https://www.youtube.com/watch?v=2kAoyVvgLyo)
+![:scale 360px](img/ncine/apptest_font.png)
+
+Multiple viewports, custom shaders, custom allocators test, text rendering
+
+---
+
+# Development Tools
+
+- [CMake](https://cmake.org/) and CPack for build and installation on all platforms
+- [Google Test](https://github.com/google/googletest) for unit testing and [Benchmark](https://github.com/google/benchmark) for micro-benchmarks
+- [Gcovr](http://gcovr.com/) for unit test coverage
+- [GitHub Actions](https://github.com/features/actions) for Continuous Integration
+- [Cppcheck](http://cppcheck.sourceforge.net/) for static C/C++ code analysis
+- [Valgrind](http://valgrind.org/) and AddressSanitizer (ASAN) for memory debugging
+- [clang-format](https://clang.llvm.org/docs/ClangFormat.html) for automatic code formatting
+- [Doxygen](http://www.stack.nl/~dimitri/doxygen/) for documentation (extracted from source comments)
+
+---
+
+# Development Tools (screenshots)
+
+![:scale 360px](img/ncine/coverage.png)
+![:scale 360px](img/ncine/doxygen.png)
+![:scale 360px](img/ncine/gtest.png)
+![:scale 360px](img/ncine/valgrind.png)
+
+Gcovr, Doxygen, Google Test, Valgrind
+
+---
+
+# Lines of code
+
+```
+/-------------------------------------------------------------------------------\
+|Language                     files          blank        comment           code|
+|-------------------------------------------------------------------------------|
+|C++                            368          15601           2974          76181|
+|C/C++ Header                   334           7093           3958          29288|
+|CMake                           44            704            383           5587|
+|YAML                             7            177             14            879|
+|XML                              2              0              1            676|
+|Lua                              8            137              5            531|
+|GLSL                            21             67              0            340|
+|Markdown                         1             10              0             63|
+|Gradle                           2              1              0             23|
+|INI                              1              2              0             10|
+|-------------------------------------------------------------------------------|
+|SUM:                           788          23792           7335         113578|
+\-------------------------------------------------------------------------------/
+```
+
+Just the main `nCine` repository, not including any external projects
+
+---
+
+# Some projects #1
+
+[![:scale 720px](img/ncine/jazz2.png)](https://www.youtube.com/watch?v=kiZKZnbqo6I)
+
+[Jazz² Resurrection](http://deat.tk/jazz2/), a Jazz Jackrabbit 2 reimplementation by _deathkiller_
+
+---
+
+# Some projects #2
+
+[![:scale 720px](img/ncine/ncJugiMapFrameworkDemo.png)](https://www.youtube.com/watch?v=3TBFN3VwXZ4)
+
+[JugiMap](http://jugimap.com/), a level editor that integrates with nCine, by _Jugilus_
+
+---
+
+# Some projects #3
+
+[![:scale 720px](img/ncine/ncJump.png)](https://www.youtube.com/watch?v=ZKdDtJiIUdo)
+
+[ncJump](https://www.antoniocaggiano.eu/posts/ncjump-devlog/), a platform with Box2D physics and integrated editor, by _Fahien_
+
+---
+
+# Some projects #4
+
+[![:scale 720px](img/ncine/SpookyGhost.png)](https://www.youtube.com/watch?v=PqrigZ-3JoM)
+
+[SpookyGhost](https://encelo.itch.io/spookyghost), a tool to create procedural animations for sprites, by _Encelo_
+
+---
+
+# Some projects #5
+
+![:scale 720px](img/ncine/ncTracer.png)
+
+[ncTracer](https://github.com/encelo/ncTracer), a simple brute-force multi-threaded CPU path tracer
+
+---
+
+# Some projects #6
+
+![:scale 720px](img/ncine/ncTiledViewer.png)
+
+[ncTiledViewer](https://github.com/nCine/ncTiledViewer), a loader for the Tiled TMX map format (using `pugixml`)
+
+---
+
+# Some projects #7
+
+[![:scale 720px](img/ncine/ncParticleEditor.png)](https://www.youtube.com/watch?v=RLNI5NMCJ1E)
+
+[ncParticleEditor](https://github.com/nCine/ncParticleEditor), an ImGui editor for the nCine particle system
+
+---
+
+# Some projects #8
+
+[![:scale 720px](img/ncine/ncInvaders.png)](https://www.youtube.com/watch?v=31k4adykiNA)
+
+[ncInvaders](https://github.com/nCine/ncInvaders), a simple version of Space Invaders
+
+---
+
+# Some projects #9
+
+[![:scale 720px](img/ncine/ncPong.png)](https://www.youtube.com/watch?v=5lSYZtRQhgQ)
+
+[ncPong](https://github.com/nCine/ncPong), an example game also available in Lua
+
+---
+
+# Recent developments
+
+- Latest big feature added: binary shader cache
+  - Helps with slow shader compilation time with ANGLE on UWP/Xbox
+- On hold but nearly complete: [Crashpad](https://chromium.googlesource.com/crashpad/crashpad/) integration for crash reporting
+  - Probably with missing Android support 😢
+- Work in progress: OpenAL EAX/EFX audio effects and filters
+- What's next: an editor? Vulkan support? multi-threading? a game?
+
+---
+
+# Future tasks and ideas
+
+- Better documentation, tutorials, and site presentation
+- Full-fledged ImGui editor
+- Graphics API abstraction and Vulkan backend
+- Lock-free multi-threaded jobs system and data-oriented ECS
+- Bindings for Rust/Haxe, scripting integration with Wren/AngelScript
+- A simple free game to release on Itch.io and/or Steam
+- Box2D integration for physics and collisions
+- Metal backend and thus iOS port
+- A game jam with prizes
+
+---
+
+# Links
+
+- Site: https://ncine.github.io/
+- GitHub: https://github.com/nCine/
+- Twitter: https://twitter.com/nCine2D
+- Discord: https://discord.gg/495ab6Y
+- YouTube: https://www.youtube.com/@ncine
+- Blog: https://encelo.github.io/tags/#nCine
+
+### Questions?
+
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      remark.macros.scale = function (percentage) {
+        var url = this;
+        return '<img src="' + url + '" style="width: ' + percentage + '" />';
+      };
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
