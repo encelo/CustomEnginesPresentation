@@ -81,6 +81,8 @@ Angelo "_Encelo_" Theodorou
 
 ![:scale 720px](img/Unity_pricing.png)
 
+![:scale 720px](img/Unity_cancels_fee.png)
+
 Well, we all know how well it went... 😅
 
 ---
@@ -521,18 +523,18 @@ Gcovr, Doxygen, Google Test, Valgrind
 /-------------------------------------------------------------------------------\
 |Language                     files          blank        comment           code|
 |-------------------------------------------------------------------------------|
-|C++                            368          15601           2974          76181|
-|C/C++ Header                   334           7093           3958          29288|
-|CMake                           44            704            383           5587|
-|YAML                             7            177             14            879|
-|XML                              2              0              1            676|
+|C++                            376          16634           3186          81469|
+|C/C++ Header                   343           7334           4097          30250|
+|CMake                           44            711            386           5648|
+|YAML                             7            177             12            883|
+|XML                              2              0              1            722|
 |Lua                              8            137              5            531|
 |GLSL                            21             67              0            340|
 |Markdown                         1             10              0             63|
 |Gradle                           2              1              0             23|
 |INI                              1              2              0             10|
 |-------------------------------------------------------------------------------|
-|SUM:                           788          23792           7335         113578|
+|SUM:                           805          25073           7687         119939|
 \-------------------------------------------------------------------------------/
 ```
 
@@ -614,12 +616,15 @@ Just the main `nCine` repository, not including any external projects
 
 # Recent developments
 
-- Latest big feature added: binary shader cache
-  - Helps with slow shader compilation time with ANGLE on UWP/Xbox
-- On hold but nearly complete: [Crashpad](https://chromium.googlesource.com/crashpad/crashpad/) integration for crash reporting
-  - Probably with missing Android support 😢
-- Work in progress: OpenAL EAX/EFX audio effects and filters
-- What's next: an editor? Vulkan support? multi-threading? a game?
+- Latest big features added:
+  - Binary shader cache (helps with slow shader compilation time with ANGLE on UWP/Xbox)
+  - OpenAL EAX/EFX audio effects and filters
+- On hold but nearly complete:
+  - [Crashpad](https://chromium.googlesource.com/crashpad/crashpad/) integration for crash reporting (probably with missing Android support 😢)
+- Work in progress:
+  - Multi-threading job system (lock-free queue with job stealing, parent/children jobs, continuations, parallel for)
+- What's next:
+  - An editor? Vulkan support? ECS with data oriented design? a game?
 
 ---
 
